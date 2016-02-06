@@ -32,6 +32,8 @@ ENV BUDDY_SERVER hostmain.domain.no
 ENV BUDDY_DATABASE dbMetakatalog
 ENV JWT_SECRET NeverShareYourSecret
 ENV YAR_SECRET NeverShareYourSecret
+ENV ATFERDS_GROUP "/151ATF"
+ENV ORDEN_GROUP "/151ORD"
 
 # Expose 3000
 EXPOSE 3000
