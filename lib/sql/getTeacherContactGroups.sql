@@ -7,7 +7,7 @@ DECLARE @orGroup varchar(60);
 SET @orGroup = '@ordenGroup';
 
 SELECT
-  DISTINCT m.ID as id,
+  DISTINCT m.ID as groupId,
   o.Description as description,
   'true' as contactTeacher,
   n.StringValue as unitId,
