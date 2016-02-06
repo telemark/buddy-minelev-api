@@ -1,6 +1,11 @@
 -- Henter fag/klasser lærer har tilgang til
 DECLARE @groupId varchar(60);
 SET @groupId = '@contactGroups';
+DECLARE @atGroup varchar(60);
+SET @atGroup = '@atferdGroup';
+DECLARE @orGroup varchar(60);
+SET @orGroup = '@ordenGroup';
+
 SELECT
   DISTINCT m.ID as groupId,
   o.Description as description,
@@ -22,8 +27,8 @@ WHERE
   AND
   o.GroupType in ('Faggruppe', 'Klassegruppe')
   AND
-  m.ID NOT LIKE '%ATF%'
+  m.ID NOT LIKE '%' + @atGroup + '%'
   AND
-  m.ID NOT LIKE '%ORD%'
+  m.ID NOT LIKE '%' + @orGroup + '%'
   AND
-  m.ID LIKE '@groupId'
+  m.ID LIKE @groupId + '%'

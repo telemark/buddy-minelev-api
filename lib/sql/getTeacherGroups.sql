@@ -1,5 +1,10 @@
 DECLARE @user varchar(60);
 SET @user = '@username';
+DECLARE @atGroup varchar(60);
+SET @atGroup = '@atferdGroup';
+DECLARE @orGroup varchar(60);
+SET @orGroup = '@ordenGroup';
+
 -- First
 SELECT
   m.ID as groupId
@@ -10,7 +15,7 @@ WHERE
 AND
   m.AttributeName = 'Owner'
 AND
-  m.ID LIKE '%/151ATF%';
+  m.ID LIKE '%' + @atGroup + '%';
 
 -- Second
 SELECT
@@ -37,7 +42,7 @@ AND
 AND
   o.GroupType in ('Faggruppe', 'Klassegruppe')
 AND
-  m.id NOT LIKE '%/151ATF%'
+  m.id NOT LIKE '%' + @atGroup + '%';
 AND
-  m.id NOT LIKE '%/151ORD%'
+  m.id NOT LIKE '%' + @orGroup + '%'
 

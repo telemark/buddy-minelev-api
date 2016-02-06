@@ -1,5 +1,7 @@
 DECLARE @studentId varchar(60);
 SET @studentId = '@id';
+DECLARE @disName varchar(60);
+SET @disName = '@search';
 SELECT
   o.Firstname as firstName,
   o.Midlename as middleName,
@@ -17,4 +19,4 @@ WHERE
   AND
   m.AttributeName = 'Member'
   AND
-  o.DisplayName LIKE '%@search%'
+  o.DisplayName LIKE '%' + @disName + '%'

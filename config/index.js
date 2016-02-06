@@ -2,7 +2,7 @@
 
 var config = {
   extens: {
-    atferds_group: process.env.ATFERDS_GROUP || '/151ATF',
+    atferd_group: process.env.ATFERD_GROUP || '/151ATF',
     orden_group: process.env.ORDEN_GROUP || '/151ORD'
   },
   buddy: {
