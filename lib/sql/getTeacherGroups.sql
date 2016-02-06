@@ -7,7 +7,7 @@ SET @orGroup = '@ordenGroup';
 
 -- First
 SELECT
-  m.ID as groupId
+  m.ID as id
 FROM
   dbMetakatalog.dbo.tblMultiValue m
 WHERE
@@ -19,7 +19,7 @@ AND
 
 -- Second
 SELECT
-  m.ID as groupId,
+  m.ID as id,
   o.Description as description,
   n.StringValue as unitId,
   s.DisplayName as unitName,
