@@ -2,17 +2,18 @@
 
 var config = {
   buddy: {
-    user: 'username', // Database username
-    password: 'password', // Database passord
-    server: 'hostname', // You can use 'localhost\\instance' to connect to named instance
-    database: 'databasename', // Database name
+    user: process.env.BUDDY_USER || 'username', // Database username
+    password: process.env.BUDDY_PASSWORD || 'password', // Database passord
+    server: process.env.BUDDY_SERVER || 'hostname', // You can use 'localhost\\instance' to connect to named instance
+    database: process.env.BUDDY_DATABASE || 'databasename', // Database name
     options: {
       encrypt: false // Use this if you're on Windows Azure
     }
   },
   SERVER_PORT: process.env.SERVER_PORT || 3000,
   JWT_SECRET: process.env.JWT_SECRET || 'NeverShareYourSecret',
-  YAR_SECRET: process.env.YAR_SECRET || 'NeverShareYourSecret'
+  YAR_SECRET: process.env.JWT_SECRET || 'NeverShareYourSecret'
 }
 
 module.exports = config
+
