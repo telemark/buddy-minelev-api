@@ -15,7 +15,7 @@ FROM
 WHERE
   m.StringValue = o.ID
   AND
-  m.ID = @id
+  m.ID = @studentId
   AND
   m.AttributeName = 'Member'
   AND
