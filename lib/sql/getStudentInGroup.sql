@@ -1,3 +1,7 @@
+DECLARE @groupId varchar(60);
+SET @groupId = '@id';
+DECLARE @studId varchar(60);
+SET @studId = '@studentId'';
 SELECT
   o.Firstname as firstName,
   o.Midlename as middleName,
@@ -11,8 +15,8 @@ FROM
 WHERE
   m.StringValue = o.ID
   AND
-  m.ID = '@id'
+  m.ID = @groupId
   AND
   m.AttributeName = 'Member'
   AND
-  m.StringValue = '@studentId'
+  m.StringValue = @studId
