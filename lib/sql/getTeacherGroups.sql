@@ -42,7 +42,7 @@ AND
 AND
   o.GroupType in ('Faggruppe', 'Klassegruppe')
 AND
-  m.id NOT LIKE '%' + @atGroup + '%'
+  m.id NOT LIKE '%' + @atGroup + '%';
 AND
-  m.id NOT LIKE '%' + @orGroup + '%';
+  m.id NOT LIKE '%' + @orGroup + '%'
 
