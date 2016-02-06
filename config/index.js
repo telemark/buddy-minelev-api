@@ -1,6 +1,10 @@
 'use strict'
 
 var config = {
+  extens: {
+    atferds_group: process.env.ATFERDS_GROUP || '/151ATF',
+    orden_group: process.env.ORDEN_GROUP || '/151ORD'
+  },
   buddy: {
     user: process.env.BUDDY_USER || 'username', // Database username
     password: process.env.BUDDY_PASSWORD || 'password', // Database passord
