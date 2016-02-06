@@ -1,4 +1,6 @@
 -- Henter fag/klasser lærer har tilgang til
+DECLARE @groupId varchar(60);
+SET @groupId = '@contactGroups';
 SELECT
   DISTINCT m.ID as groupId,
   o.Description as description,
@@ -24,4 +26,4 @@ WHERE
   AND
   m.ID NOT LIKE '%ORD%'
   AND
-  m.ID LIKE '@contactGroups'
+  m.ID LIKE '@groupId'
