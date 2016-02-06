@@ -17,12 +17,26 @@ function getPublicResponse (request, reply) {
 
 /*!
  *
- * User
+ * Buddy
  *
  */
 
 function getStudents (request, reply) {
-  reply('yeah')
+  var username = request.params.username
+  var id = request.params.id
+  var options = {
+    username: username,
+    search: id,
+    type: 'getStudent'
+  }
+
+  getStudentsAndGroups(options, function (err, students) {
+    if (err) {
+      reply(err)
+    } else {
+      reply(students)
+    }
+  })
 }
 
 function searchStudents (request, reply) {
@@ -30,7 +44,8 @@ function searchStudents (request, reply) {
   var search = request.params.search
   var options = {
     username: username,
-    search: search
+    search: search,
+    type: 'getStudents'
   }
 
   getStudentsAndGroups(options, function (err, students) {
