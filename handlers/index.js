@@ -36,8 +36,9 @@ function searchStudents (request, reply) {
   getStudentsAndGroups(options, function (err, students) {
     if (err) {
       reply(err)
+    } else {
+      reply(students)
     }
-    reply(students)
   })
 }
 
