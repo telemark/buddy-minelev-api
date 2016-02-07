@@ -7,7 +7,7 @@ DECLARE @orGroup varchar(60);
 SET @orGroup = '@ordenGroup';
 
 SELECT
-  DISTINCT m.ID as groupId,
+  DISTINCT m.ID as id,
   o.Description as description,
   'true' as contactTeacher,
   n.StringValue as unitId,
@@ -25,7 +25,7 @@ WHERE
   AND
   o.ID = m.ID
   AND
-  o.GroupType in ('Faggruppe', 'Klassegruppe')
+  o.GroupType in ('Faggruppe')
   AND
   m.ID NOT LIKE '%' + @atGroup + '%'
   AND
