@@ -5,7 +5,7 @@ var config = {
   appVersion: '1.0.0',
   logger: {
     enabled: process.env.SLACK_ENABLED || false,
-    webhookUrl: process.env.SLACK_WEBHOOK_URL || 'https://hooks.slack.com/services/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',
+    webhookUrl: process.env.SLACK_WEBHOOK_URL || 'https://hooks.slack.com/services/xxx/xxx/xxx',
     channel: process.env.SLACK_CHANNEL || '#logging',
     username: process.env.SLACK_USERNAME || 'loggerBot'
   },
