@@ -1,6 +1,7 @@
 'use strict'
 
 var getStudentsAndGroups = require('../lib/getStudentsAndGroups')
+var config = require('../config')
 
 /*!
  *
@@ -25,6 +26,7 @@ function getStudents (request, reply) {
   var username = request.params.username
   var id = request.params.id
   var options = {
+    appName: config.appName,
     username: username,
     search: id,
     type: 'getStudent'
@@ -44,6 +46,7 @@ function searchStudents (request, reply) {
   var username = request.params.username
   var search = request.params.search
   var options = {
+    appName: config.appName,
     username: username,
     search: search,
     type: 'getStudents'
