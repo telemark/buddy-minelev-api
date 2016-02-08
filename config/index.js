@@ -1,6 +1,14 @@
 'use strict'
 
 var config = {
+  appName: 'buddy-minelev-api',
+  appVersion: '1.0.0',
+  logger: {
+    enabled: process.env.SLACK_ENABLED || false,
+    webhookUrl: process.env.SLACK_WEBHOOK_URL || 'https://hooks.slack.com/services/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',
+    channel: process.env.SLACK_CHANNEL || '#logging',
+    username: process.env.SLACK_USERNAME || 'loggerBot'
+  },
   extens: {
     atferd_group: process.env.ATFERD_GROUP || '/151ATF',
     orden_group: process.env.ORDEN_GROUP || '/151ORD',
