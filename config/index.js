@@ -3,7 +3,8 @@
 var config = {
   extens: {
     atferd_group: process.env.ATFERD_GROUP || '/151ATF',
-    orden_group: process.env.ORDEN_GROUP || '/151ORD'
+    orden_group: process.env.ORDEN_GROUP || '/151ORD',
+    prove_group: process.env.PROVE_GROUP || '/151KP'
   },
   buddy: {
     user: process.env.BUDDY_USER || 'username', // Database username
