@@ -4,6 +4,8 @@ DECLARE @atGroup varchar(60);
 SET @atGroup = '@atferdGroup';
 DECLARE @orGroup varchar(60);
 SET @orGroup = '@ordenGroup';
+DECLARE @prGroup varchar(60);
+SET @prGroup = '@proveGroup';
 
 -- First
 SELECT
@@ -41,6 +43,8 @@ AND
   m.AttributeName = 'Owner'
 AND
   o.GroupType in ('Faggruppe', 'Klassegruppe')
+AND
+  m.id NOT LIKE '%' + @prGroup + '%'
 AND
   m.id NOT LIKE '%' + @atGroup + '%'
 AND

@@ -5,6 +5,8 @@ DECLARE @atGroup varchar(60);
 SET @atGroup = '@atferdGroup';
 DECLARE @orGroup varchar(60);
 SET @orGroup = '@ordenGroup';
+DECLARE @prGroup varchar(60);
+SET @prGroup = '@proveGroup';
 
 SELECT
   DISTINCT m.ID as id,
@@ -30,5 +32,7 @@ WHERE
   m.ID NOT LIKE '%' + @atGroup + '%'
   AND
   m.ID NOT LIKE '%' + @orGroup + '%'
+  AND
+  m.ID NOT LIKE '%' + @prGroup + '%'
   AND
   m.ID LIKE @groupId + '%'
