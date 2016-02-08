@@ -32,7 +32,8 @@ function getStudents (request, reply) {
 
   getStudentsAndGroups(options, function (err, students) {
     if (err) {
-      reply(err)
+      var code = err.statusCode || 520
+      reply(err).code(code)
     } else {
       reply(students)
     }
