@@ -8,6 +8,8 @@ SELECT
   o.Lastname as lastName,
   o.DisplayName as fullName,
   o.SSN as personalIdNumber,
+  o.PrivateMobile as mobilePhone,
+  o.PrivateMail as mail,
   m.StringValue as userName
 FROM
   dbMetakatalog.dbo.tblMultiValue m,
