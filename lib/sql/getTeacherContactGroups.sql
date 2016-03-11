@@ -14,7 +14,8 @@ SELECT
   'true' as contactTeacher,
   n.StringValue as unitId,
   s.DisplayName as unitName,
-  s.OrganizationNumber as organizationNumber
+  s.OrganizationNumber as organizationNumber,
+  o.GroupType as groupType
 FROM
   dbMetakatalog.dbo.tblMultiValue m,
   dbMetakatalog.dbo.tblObjects o
@@ -27,7 +28,7 @@ WHERE
   AND
   o.ID = m.ID
   AND
-  o.GroupType in ('Faggruppe')
+  o.GroupType in ('Faggruppe', 'Klassegruppe')
   AND
   m.ID NOT LIKE '%' + @atGroup + '%'
   AND
