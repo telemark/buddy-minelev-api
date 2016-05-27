@@ -73,3 +73,37 @@ Returns students and which classes the teacher (username) has a relation to.
   }
 ]
 ```
+
+
+Example results from ```/users/{username}/students/{id}```
+
+Return given student that teacher has relation to.
+```js
+[
+  {
+    "firstName": "Helge Grim",
+    "middleName": null,
+    "lastName": "Grim",
+    "fullName": "Helge Grim",
+    "personalIdNumber": "02059711111",
+    "mobilePhone": "+4798888888",
+    "mail": "helgeg@hotmail.com",
+    "userName": "0205helgeg",
+    "contactTeacher": false,
+    "unitId": "BAMVS",
+    "unitName": "Bamble vgs. avd. Grasmyr",
+    "organizationNumber": "NO974568098",
+    "mainGroupName": "BAMVS:3ST",
+    "groups": [
+      {
+        "id": "BAMVS:3ST/151FSP5098",
+        "description": "Spansk I+II",
+        "unitId": "BAMVS",
+        "unitName": "Bamble vgs. avd. Grasmyr",
+        "organizationNumber": "NO974568098",
+        "contactTeacher": false
+      }
+    ]
+  }
+]
+```
