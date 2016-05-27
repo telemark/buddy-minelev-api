@@ -67,7 +67,7 @@ Returns students and which classes the teacher (username) has a relation to.
         "unitId": "BAMVS",
         "unitName": "Bamble vgs. avd. Grasmyr",
         "organizationNumber": "NO974568098",
-        "contactTeacher": false
+        "contactTeacher": true
       }
     ]
   }
