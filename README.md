@@ -16,6 +16,8 @@ $ npm run generate
 curl -v -H "Authorization: <token>" http://localhost:3000
 ```
 
+Arbeidsflyt til internt bruk (draw.io) finnes [her](https://drive.google.com/file/d/0Bxh4BAJEIHuoeHU2a3J2LTRRVDA/view?usp=sharing).
+
 Example result from ```/users/{username}/search/{search}```.
 
 Returns students and which classes the teacher (username) has a relation to.
