@@ -18,7 +18,7 @@ curl -v -H "Authorization: <token>" http://localhost:3000
 
 Arbeidsflyt til internt bruk (draw.io) finnes [her](https://drive.google.com/file/d/0Bxh4BAJEIHuoeHU2a3J2LTRRVDA/view?usp=sharing).
 
-Example result from ```/users/{username}/search/{search}```.
+### Example result from ```/users/{username}/search/{search}```.
 
 Returns students and which classes the teacher (username) has a relation to.
 ```js
@@ -77,7 +77,7 @@ Returns students and which classes the teacher (username) has a relation to.
 ```
 
 
-Example results from ```/users/{username}/students/{id}```
+### Example results from ```/users/{username}/students/{id}```
 
 Return given student that teacher has relation to.
 ```js
@@ -106,6 +106,57 @@ Return given student that teacher has relation to.
         "contactTeacher": false
       }
     ]
+  }
+]
+```
+
+### Example results from ```/groups/{groupId}/students```
+
+Return students in given group
+```js
+[
+  {
+    "firstName": "Helge",
+    "middleName": null,
+    "lastName": "Grim",
+    "fullName": "Helge Grim",
+    "personalIdNumber": "02059711111",
+    "mobilePhone": "+4748300000",
+    "mail": null,
+    "userName": "0903grim"
+  },
+  {
+    "firstName": "Halgrim",
+    "middleName": null,
+    "lastName": "Durk",
+    "fullName": "Halgrim Durk",
+    "personalIdNumber": "02059711112",
+    "mobilePhone": "+4748300000",
+    "mail": "halgrim.durk@hotmail.com",
+    "userName": "1010halg"
+  }
+ ]
+```
+
+### Example results from ```/users/{username}/contactClasses```
+
+Return a teachers contact classes
+```js
+[
+  {
+    "Id": "KRAVS:2REA"
+  }
+]
+```
+
+## Example results from ```/users/{username}/contactClasses```
+
+Return given students contact teachers
+```js
+[
+  {
+    "username": "jantejante",
+    "groupId": "KRAVS:3REA"
   }
 ]
 ```
