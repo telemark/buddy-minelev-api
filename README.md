@@ -149,7 +149,7 @@ Return a teachers contact classes
 ]
 ```
 
-## Example results from ```/users/{username}/contactClasses```
+### Example results from ```/users/{username}/contactTeachers```
 
 Return given students contact teachers
 ```js
