@@ -15,6 +15,45 @@ var routes = [
   },
   {
     method: 'GET',
+    path: '/users/{username}/contactClasses',
+    handler: handlers.getContactClasses,
+    config: {
+      description: 'Returns contact classes',
+      validate: {
+        params: {
+          username: Joi.string().min(3).max(40).required()
+        }
+      }
+    }
+  },
+  {
+    method: 'GET',
+    path: '/users/{username}/contactTeachers',
+    handler: handlers.getStudentContactTeachers,
+    config: {
+      description: 'Returns a students contact teachers',
+      validate: {
+        params: {
+          username: Joi.string().min(3).max(40).required()
+        }
+      }
+    }
+  },
+  {
+    method: 'GET',
+    path: '/groups/{groupId}/students',
+    handler: handlers.getStudentsInGroup,
+    config: {
+      description: 'Returns students in group',
+      validate: {
+        params: {
+          groupId: Joi.string().min(3).max(40).required()
+        }
+      }
+    }
+  },
+  {
+    method: 'GET',
     path: '/users/{username}/search/{search}',
     handler: handlers.searchStudents,
     config: {

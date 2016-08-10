@@ -1,6 +1,9 @@
 'use strict'
 
-var getStudentsAndGroups = require('../lib/getStudentsAndGroups')
+var qryGetStudentsAndGroups = require('../lib/getStudentsAndGroups')
+var qryGetTeachersContactGroups = require('../lib/getTeachersContactGroups')
+var qryGetStudentsInGroup = require('../lib/getStudentsInGroup')
+var gryGetStudentContactTeachers = require('../lib/getStudentContactTeachers')
 var config = require('../config')
 
 /*!
@@ -22,6 +25,52 @@ function getPublicResponse (request, reply) {
  *
  */
 
+function getStudentsInGroup (request, reply) {
+  var groupId = request.params.groupId
+  var options = {
+    groupId: groupId
+  }
+  qryGetStudentsInGroup(options, function (err, groups) {
+    if (err) {
+      var code = err.statusCode || 520
+      reply(err).code(code)
+    } else {
+      reply(groups)
+    }
+  })
+}
+
+function getStudentContactTeachers (request, reply) {
+  var username = request.params.username
+  var options = {
+    username: username
+  }
+  gryGetStudentContactTeachers(options, function (err, groups) {
+    if (err) {
+      var code = err.statusCode || 520
+      reply(err).code(code)
+    } else {
+      reply(groups)
+    }
+  })
+}
+
+function getContactClasses (request, reply) {
+  var username = request.params.username
+  var options = {
+    username: username
+  }
+
+  qryGetTeachersContactGroups(options, function (err, groups) {
+    if (err) {
+      var code = err.statusCode || 520
+      reply(err).code(code)
+    } else {
+      reply(groups)
+    }
+  })
+}
+
 function getStudents (request, reply) {
   var username = request.params.username
   var id = request.params.id
@@ -32,7 +81,7 @@ function getStudents (request, reply) {
     type: 'getStudent'
   }
 
-  getStudentsAndGroups(options, function (err, students) {
+  qryGetStudentsAndGroups(options, function (err, students) {
     if (err) {
       var code = err.statusCode || 520
       reply(err).code(code)
@@ -52,7 +101,7 @@ function searchStudents (request, reply) {
     type: 'getStudents'
   }
 
-  getStudentsAndGroups(options, function (err, students) {
+  qryGetStudentsAndGroups(options, function (err, students) {
     if (err) {
       var code = err.statusCode || 520
       reply(err).code(code)
@@ -63,6 +112,12 @@ function searchStudents (request, reply) {
 }
 
 module.exports.getPublicResponse = getPublicResponse
+
+module.exports.getContactClasses = getContactClasses
+
+module.exports.getStudentsInGroup = getStudentsInGroup
+
+module.exports.getStudentContactTeachers = getStudentContactTeachers
 
 module.exports.searchStudents = searchStudents
 
