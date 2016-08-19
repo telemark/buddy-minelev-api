@@ -156,7 +156,8 @@ Return given students contact teachers
 [
   {
     "username": "jantejante",
-    "groupId": "KRAVS:3REA"
+    "groupId": "KRAVS:3REA",
+    "mail": "jante@t-fk.no"
   }
 ]
 ```
