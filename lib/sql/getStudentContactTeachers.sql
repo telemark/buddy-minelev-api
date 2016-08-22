@@ -6,7 +6,7 @@ SET @user = '@username';
 SELECT 
   m.StringValue as username,
   LEFT(m.ID, CHARINDEX('/', m.ID) - 1)  as groupId,
-  o.PrivateMail as mail
+  o.Mail as mail
 FROM dbMetakatalog.dbo.tblMultiValue m
   INNER JOIN dbMetakatalog.dbo.tblObjects o ON m.StringValue = o.ID
 WHERE m.ID IN
