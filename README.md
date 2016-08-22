@@ -161,3 +161,23 @@ Return given students contact teachers
   }
 ]
 ```
+
+### Example results from ```/teachers/all```
+
+Returns all teachers
+
+
+```js
+[
+  {
+    "firstName": "Testine",
+    "middleName": null,
+    "lastName": "Testen",
+    "fullName": "Testine Testen",
+    "personalIdNumber": "01016145048",
+    "mobilePhone": null,
+    "mail": "Testine.Testen@t-fk.no",
+    "privateMail": "Geir.Gasodden@t-fk.no"
+  }
+]
+```
