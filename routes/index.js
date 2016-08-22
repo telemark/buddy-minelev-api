@@ -41,6 +41,14 @@ var routes = [
   },
   {
     method: 'GET',
+    path: '/teachers/all',
+    handler: handlers.getAllTeachers,
+    config: {
+      description: 'Returns all teachers'
+    }
+  },
+  {
+    method: 'GET',
     path: '/groups/{groupId}/students',
     handler: handlers.getStudentsInGroup,
     config: {

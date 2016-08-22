@@ -1,5 +1,6 @@
 'use strict'
 
+var qryGetAllTeachers = require('../lib/getAllTeachers')
 var qryGetStudentsAndGroups = require('../lib/getStudentsAndGroups')
 var qryGetTeachersContactGroups = require('../lib/getTeachersContactGroups')
 var qryGetStudentsInGroup = require('../lib/getStudentsInGroup')
@@ -24,6 +25,18 @@ function getPublicResponse (request, reply) {
  * Buddy
  *
  */
+
+function getAllTeachers (request, reply) {
+  var options = {}
+  qryGetAllTeachers(options, function (err, teachers) {
+    if (err) {
+      var code = err.statusCode || 520
+      reply(err).code(code)
+    } else {
+      reply(teachers)
+    }
+  })
+}
 
 function getStudentsInGroup (request, reply) {
   var groupId = request.params.groupId
@@ -122,3 +135,5 @@ module.exports.getStudentContactTeachers = getStudentContactTeachers
 module.exports.searchStudents = searchStudents
 
 module.exports.getStudents = getStudents
+
+module.exports.getAllTeachers = getAllTeachers
