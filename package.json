@@ -28,7 +28,7 @@
     "generate": "node utils/generateTestToken.js"
   },
   "dependencies": {
-    "hapi": "^14.1.0",
+    "hapi": "^15.0.1",
     "hapi-auth-jwt2": "^7.0.1",
     "inert": "^4.0.1",
     "joi": "^9.0.4",
