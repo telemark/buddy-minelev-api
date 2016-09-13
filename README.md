@@ -174,6 +174,7 @@ Returns all teachers
     "middleName": null,
     "lastName": "Testen",
     "fullName": "Testine Testen",
+    "username": "01016101",
     "personalIdNumber": "01016145048",
     "mobilePhone": null,
     "mail": "Testine.Testen@t-fk.no",
