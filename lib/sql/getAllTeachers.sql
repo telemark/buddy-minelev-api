@@ -7,8 +7,10 @@ SELECT o.Firstname as firstName,
   o.PrivateMobile as mobilePhone,
   o.Mail as mail,
   o.PrivateMail as privateMail,
-  o.Department as department
+  o.Department as department,
+  m.id as organizationNumber
   FROM dbMetakatalog.dbo.tblObjects o
+  INNER JOIN dbMetakatalog.dbo.tblKonverterIDer m ON o.Department = m.konverterTil
   WHERE IsTeacher = 1
   AND Status = 'active'
   AND Description LIKE '%OU=TFK,DC=login,DC=top,DC=no%'
