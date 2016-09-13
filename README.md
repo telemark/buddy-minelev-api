@@ -178,7 +178,8 @@ Returns all teachers
     "personalIdNumber": "01016145048",
     "mobilePhone": null,
     "mail": "Testine.Testen@t-fk.no",
-    "privateMail": "Geir.Gasodden@t-fk.no"
+    "privateMail": "Geir.Gasodden@t-fk.no",
+    "department": "SKIVS"
   }
 ]
 ```
