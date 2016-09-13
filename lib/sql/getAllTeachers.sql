@@ -6,7 +6,8 @@ SELECT o.Firstname as firstName,
   o.SSN as personalIdNumber,
   o.PrivateMobile as mobilePhone,
   o.Mail as mail,
-  o.PrivateMail as privateMail
+  o.PrivateMail as privateMail,
+  o.Department as department
   FROM dbMetakatalog.dbo.tblObjects o
   WHERE IsTeacher = 1
   AND Status = 'active'
