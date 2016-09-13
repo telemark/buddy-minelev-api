@@ -8,9 +8,9 @@ SELECT o.Firstname as firstName,
   o.Mail as mail,
   o.PrivateMail as privateMail,
   o.Department as department,
-  m.id as organizationNumber
+  Replace(m.OrganizationNumber, 'NO', '') as organizationNumber
   FROM dbMetakatalog.dbo.tblObjects o
-  INNER JOIN dbMetakatalog.dbo.tblKonverterIDer m ON o.Department = m.konverterTil
-  WHERE IsTeacher = 1
-  AND Status = 'active'
-  AND Description LIKE '%OU=TFK,DC=login,DC=top,DC=no%'
+  JOIN dbMetakatalog.dbo.tblObjects m ON m.ID = o.Department
+  WHERE o.IsTeacher = 1
+  AND o.Status = 'active'
+  AND o.Description LIKE '%OU=TFK,DC=login,DC=top,DC=no%'
