@@ -179,7 +179,8 @@ Returns all teachers
     "mobilePhone": null,
     "mail": "Testine.Testen@t-fk.no",
     "privateMail": "Geir.Gasodden@t-fk.no",
-    "department": "SKIVS"
+    "department": "SKIVS",
+    "organizationNumber": "974568039"
   }
 ]
 ```
