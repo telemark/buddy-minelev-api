@@ -1,7 +1,7 @@
 {
   "name": "buddy-minelev-api",
   "description": "Buddy API for MinElev",
-  "version": "2.0.5",
+  "version": "2.0.6",
   "license": "MIT",
   "private": true,
   "author": {
@@ -33,8 +33,8 @@
     "inert": "^4.0.1",
     "joi": "^10.0.0",
     "jsonwebtoken": "^7.1.8",
-    "lout": "^9.1.0",
     "mssql": "^4.0.1",
+    "lout": "^10.0.0",
     "vision": "^4.0.1",
     "yar": "^8.0.0",
     "async": "^2.0.1",
@@ -44,7 +44,7 @@
   },
   "devDependencies": {
     "coveralls": "^2.11.6",
-    "standard": "^8.0.0",
+    "standard": "^10.0.0-beta.0",
     "tap": "^10.0.0"
   }
 }
