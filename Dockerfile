@@ -1,11 +1,5 @@
-###########################################################
-#
-# Dockerfile for buddy-minelev-api
-#
-###########################################################
-
-# Setting the base to nodejs 4.3.0
-FROM mhart/alpine-node:4.3.0
+# Setting the base to nodejs 8.4.0
+FROM node:8.4.0-alpine
 
 # Maintainer
 MAINTAINER Jonas Enge

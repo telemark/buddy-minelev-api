@@ -1,7 +1,7 @@
 {
   "name": "buddy-minelev-api",
   "description": "Buddy API for MinElev",
-  "version": "2.0.7",
+  "version": "3.0.0",
   "license": "MIT",
   "private": true,
   "author": {
@@ -17,7 +17,7 @@
     }
   ],
   "engines": {
-    "node": ">=4.1.0"
+    "node": ">=8.4.0"
   },
   "scripts": {
     "start": "node standalone.js",
@@ -28,23 +28,23 @@
     "generate": "node utils/generateTestToken.js"
   },
   "dependencies": {
-    "hapi": "^16.0.1",
-    "hapi-auth-jwt2": "^7.0.1",
-    "inert": "^4.0.1",
-    "joi": "^10.0.0",
-    "jsonwebtoken": "^7.1.8",
-    "mssql": "^4.0.1",
-    "lout": "^10.0.0",
-    "vision": "^4.0.1",
-    "yar": "^8.0.0",
-    "async": "^2.0.1",
-    "unique-concat": "^0.2.2",
-    "winston": "^2.1.1",
-    "winston-slack-webhook": "^0.1.1"
+    "hapi": "16.5.2",
+    "hapi-auth-jwt2": "7.3.0",
+    "inert": "4.2.1",
+    "joi": "10.6.0",
+    "jsonwebtoken": "7.4.3",
+    "mssql": "^3.3.0",
+    "lout": "10.0.2",
+    "vision": "4.1.1",
+    "yar": "8.1.2",
+    "async": "2.5.0",
+    "unique-concat": "0.2.2",
+    "winston": "2.3.1",
+    "winston-slack-webhook": "0.1.1"
   },
   "devDependencies": {
-    "coveralls": "^2.11.6",
-    "standard": "^10.0.0-beta.0",
-    "tap": "^10.0.0"
+    "coveralls": "2.13.1",
+    "standard": "10.0.3",
+    "tap": "10.7.2"
   }
 }

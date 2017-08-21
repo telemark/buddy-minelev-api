@@ -1,8 +1,10 @@
 'use strict'
 
-var config = {
-  appName: 'buddy-minelev-api',
-  appVersion: '1.0.0',
+const pkg = require('../package.json')
+
+module.exports = {
+  appName: pkg.name,
+  appVersion: pkg.version,
   logger: {
     enabled: process.env.SLACK_ENABLED || false,
     webhookUrl: process.env.SLACK_WEBHOOK_URL || 'https://hooks.slack.com/services/xxx/xxx/xxx',
@@ -10,9 +12,9 @@ var config = {
     username: process.env.SLACK_USERNAME || 'loggerBot'
   },
   extens: {
-    atferd_group: process.env.ATFERD_GROUP || '/151ATF',
-    orden_group: process.env.ORDEN_GROUP || '/151ORD',
-    prove_group: process.env.PROVE_GROUP || '/151KP'
+    atferd_group: process.env.ATFERD_GROUP || '/171ATF',
+    orden_group: process.env.ORDEN_GROUP || '/171ORD',
+    prove_group: process.env.PROVE_GROUP || '/171KP'
   },
   buddy: {
     user: process.env.BUDDY_USER || 'username', // Database username
@@ -27,6 +29,3 @@ var config = {
   JWT_SECRET: process.env.JWT_SECRET || 'NeverShareYourSecret',
   YAR_SECRET: process.env.JWT_SECRET || 'NeverShareYourSecret'
 }
-
-module.exports = config
-
