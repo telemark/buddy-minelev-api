@@ -32,7 +32,7 @@
     "hapi-auth-jwt2": "7.3.0",
     "inert": "4.2.1",
     "joi": "10.6.0",
-    "jsonwebtoken": "8.0.0",
+    "jsonwebtoken": "8.0.1",
     "mssql": "^3.3.0",
     "lout": "10.0.2",
     "vision": "4.1.1",
