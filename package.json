@@ -39,7 +39,7 @@
     "yar": "8.1.2",
     "async": "2.5.0",
     "unique-concat": "0.2.2",
-    "winston": "2.3.1",
+    "winston": "3.0.0-rc0",
     "winston-slack-webhook": "0.1.6"
   },
   "devDependencies": {
