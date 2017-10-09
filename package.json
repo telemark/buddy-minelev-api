@@ -31,15 +31,15 @@
     "hapi": "16.6.2",
     "hapi-auth-jwt2": "7.3.0",
     "inert": "5.0.0-rc1",
-    "joi": "11.1.1",
+    "joi": "11.3.3",
     "jsonwebtoken": "8.0.1",
     "mssql": "^4.1.0",
-    "lout": "10.0.2",
+    "lout": "10.0.3",
     "vision": "4.1.1",
     "yar": "8.1.2",
     "async": "2.5.0",
     "unique-concat": "0.2.2",
-    "winston": "2.3.1",
+    "winston": "3.0.0-rc0",
     "winston-slack-webhook": "0.1.6"
   },
   "devDependencies": {
