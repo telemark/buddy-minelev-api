@@ -35,7 +35,7 @@
     "jsonwebtoken": "8.1.0",
     "mssql": "^4.1.0",
     "lout": "10.0.3",
-    "vision": "4.1.1",
+    "vision": "5.0.0",
     "yar": "8.1.2",
     "async": "2.5.0",
     "unique-concat": "0.2.2",
