@@ -30,7 +30,7 @@
   "dependencies": {
     "hapi": "17.1.1",
     "hapi-auth-jwt2": "7.3.0",
-    "inert": "5.0.0-rc1",
+    "inert": "5.1.0",
     "joi": "13.0.2",
     "jsonwebtoken": "8.1.0",
     "mssql": "^4.1.0",
