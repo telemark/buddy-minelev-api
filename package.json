@@ -29,7 +29,7 @@
   },
   "dependencies": {
     "hapi": "17.1.1",
-    "hapi-auth-jwt2": "7.4.1",
+    "hapi-auth-jwt2": "8.0.0",
     "inert": "5.0.0-rc1",
     "joi": "13.1.2",
     "jsonwebtoken": "8.1.1",
