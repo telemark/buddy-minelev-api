@@ -1,8 +1,8 @@
 [![Build Status](https://travis-ci.org/telemark/buddy-minelev-api.svg?branch=master)](https://travis-ci.org/telemark/buddy-minelev-api)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
-# buddy-minelev-api
-
 [![Greenkeeper badge](https://badges.greenkeeper.io/telemark/buddy-minelev-api.svg)](https://greenkeeper.io/)
+
+# buddy-minelev-api
 
 work in progress...
 
@@ -186,3 +186,6 @@ Returns all teachers
   }
 ]
 ```
+
+## License
+[MIT](LICENSE)

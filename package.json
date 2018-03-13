@@ -17,33 +17,35 @@
     }
   ],
   "engines": {
-    "node": ">=8.4.0"
+    "node": ">=8.10.0"
   },
   "scripts": {
     "start": "node standalone.js",
-    "test": "standard && tap --reporter=spec test/*.js",
-    "setup": "npm install && node setup.js",
+    "test": "nsp check && standard && tap --reporter=spec test/*.js",
     "coverage": "tap test/*.js --coverage",
     "coveralls": "tap --cov --coverage-report=lcov test/*.js && cat coverage/lcov.info | coveralls",
-    "generate": "node utils/generateTestToken.js"
+    "generate": "node utils/generateTestToken.js",
+    "standard-fix": "standard --fix",
+    "refresh": "rm -rf node_modules && rm package-lock.json && npm install"
   },
   "dependencies": {
-    "hapi": "17.1.1",
+    "hapi": "16.6.2",
     "hapi-auth-jwt2": "7.4.1",
-    "inert": "5.0.0-rc1",
+    "inert": "4.2.1",
     "joi": "13.1.2",
     "jsonwebtoken": "8.2.0",
     "mssql": "^4.1.0",
     "lout": "10.0.3",
-    "vision": "5.3.1",
-    "yar": "9.0.1",
+    "vision": "4.1.1",
+    "yar": "8.1.2",
     "async": "2.6.0",
     "unique-concat": "0.2.2",
-    "winston": "3.0.0-rc0",
+    "winston": "2.4.1",
     "winston-slack-webhook": "0.1.6"
   },
   "devDependencies": {
     "coveralls": "3.0.0",
+    "nsp": "3.2.1",
     "standard": "11.0.0",
     "tap": "11.1.2"
   }
