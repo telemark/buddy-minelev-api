@@ -18,4 +18,3 @@ tap.ok(handlers.getStudentsInGroup, 'Handler has method getStudentsInGroup')
 tap.ok(handlers.getStudentContactTeachers, 'Handler has method getStudentContactTeachers')
 
 tap.ok(handlers.getStudentContactTeachers, 'Handler has method getAllTeachers')
-
