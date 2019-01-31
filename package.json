@@ -30,7 +30,7 @@
     "refresh": "rm -rf node_modules && rm package-lock.json && npm install"
   },
   "dependencies": {
-    "hapi": "18.0.0",
+    "hapi": "18.0.1",
     "hapi-auth-jwt2": "7.4.1",
     "inert": "4.2.1",
     "joi": "14.3.1",
