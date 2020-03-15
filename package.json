@@ -39,7 +39,7 @@
     "lout": "10.0.3",
     "vision": "4.1.1",
     "yar": "8.1.2",
-    "async": "2.6.3",
+    "async": "3.2.0",
     "unique-concat": "0.2.2",
     "winston": "2.4.4",
     "winston-slack-webhook": "0.1.6"
